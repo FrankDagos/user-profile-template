@@ -86,6 +86,14 @@ table {
   overflow: hidden;
 }
 
+/* ==== Fix texto largo en tablas ==== */
+table td {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal; /* permite salto de línea */
+  max-width: 250px; /* opcional, ajusta ancho de celda */
+}
+
 caption {
   caption-side: top;
   margin-bottom: 10px;
