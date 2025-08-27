@@ -101,12 +101,14 @@ thead th {
   padding: 12px;
   color: #bbb;
   text-align: left;
+  font-size: 0.95rem;
 }
 
 tbody td {
   padding: 12px;
   border-top: 1px solid #333;
   color: #eee;
+  font-size: 0.9rem;
 }
 
 /* ==== Formulario ==== */
@@ -170,4 +172,76 @@ footer a {
 
 footer a:hover {
   color: #fff;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  main {
+    margin: 15px;
+    padding: 15px;
+  }
+
+  aside img {
+    width: 120px;
+    height: 120px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  thead {
+    display: none; /* ocultamos cabecera */
+  }
+
+  table,
+  tbody,
+  tr,
+  td {
+    display: block;
+    width: 100%;
+  }
+
+  tbody tr {
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 10px;
+    background: #1a1a1a;
+  }
+
+  tbody td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    color: #bbb;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 480px) {
+  aside img {
+    width: 100px;
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  footer a {
+    font-size: 1.5rem;
+    margin: 0 6px;
+  }
 }
